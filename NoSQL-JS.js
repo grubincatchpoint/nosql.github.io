@@ -1,0 +1,1 @@
+#addbutton.onclick=function(){ document.getElementById(reportJSON).value += Applesauce};

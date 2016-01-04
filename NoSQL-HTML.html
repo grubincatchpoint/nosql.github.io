@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html>
-<title>No SQL Charting</title>
+<title>Partition Report: Help</title>
 <style type="text/css">
     *
     {
@@ -49,7 +49,6 @@
     }
 </style>
 <link type="text/css" rel="stylesheet" href="NoSQL-CSS.css"/>
-<script src="NoSQL-JS.js"></script>
 <head>
     <h1>
     No SQL Reporting
@@ -67,14 +66,13 @@
                     Query</button>
             </div>
             <br />
-            <div>
  <table border="1" id="query_table" width="100%">
                 <tr>
                     <td>
                         Report Type
                     </td>
                     <td>
-                        <select class="tiny" name="reportTypeDropdown">
+                        <select class="multi_medium" name="reportTypeDropdown">
                             <option value="1" selected>Test</option>
                             <option value="2">Host Collection </option>
                             <option value="3">Content Zone</option>
@@ -88,17 +86,6 @@
                             <option value="11">Glimpse Mobile Screen</option>
                             <option value="12">Glimpse Mobile Screen Raw</option>
                         </select>
-                     <button class="goto_button" id="add_button" type="button">
-                    Add</button>
-                     <button class="goto_button" id="clear_button" type="button">
-                    Clear</button>
-                           <p>          
-                            JSON:
-                            <input type ="text" name="ReportJSON" id="reportJSON">
-                        </p>
-                    </td>
-                    <td>
-                       
                     </td>
                      <tr>
                     <td>
@@ -307,6 +294,8 @@
                             <option value="131">UniqueTestRuns</option>
                         </select>
                     </td>
+                    </tr>    
+                <tr>
                     <td>
                         Data Values
                     </td>
@@ -356,9 +345,6 @@
                         </select>
                     </td>
                     <td>
-                    </tr>
-                    <tr>
-                    <td>
                         Histogram Data Values
                     </td>
                     <td>
@@ -401,79 +387,11 @@
                             <option value="30">WEB-SOCKET</option>
                         </select>
                     </td>
-                    <td>
-                        Dimensions
-                    </td>
-                    <td>
-                        <select class="multi_large" _data_key="ndky" _data_type="bitwise" multiple>
-                            <option value="0">None</option>
-                            <option value="1">Location</option>
-                            <option value="2">City</option>
-                            <option value="4">ISP</option>
-                            <option value="8">HostCollection</option>
-                            <option value="16">ContentZone</option>
-                            <option value="32">TransactionStep</option>
-                            <option value="47">AllSyntheticHostCollectionLevelOnly</option>
-                            <option value="55">AllSyntheticContentZoneLevelOnly</option>
-                            <option value="64">Country</option>
-                            <option value="128">Region</option>
-                            <option value="256">CityExternal</option>
-                            <option value="512">PostalCode</option>
-                            <option value="1024">AreaCode</option>
-                            <option value="2048">DmaCode</option>
-                            <option value="4096">ISPExternal</option>
-                            <option value="8192">NetworkSpeed</option>
-                            <option value="16384">ASN</option>
-                            <option value="32704">AllRealUserRawOnly</option>
-                            <option value="32768" selected>Test</option>
-                            <option value="131072">ErrorCode</option>
-                            <option value="131111">AllSyntheticTestLevelOnly</option>
-                            <option value="131135">AllSyntheticOnly</option>
-                            <option value="262144">Address</option>
-                            <option value="524288">Tracepoint</option>
-                            <option value="1048576">Continent</option>
-                            <option value="2097152">TransactionStepName</option>
-                            <option value="4194304">Product</option>
-                            <option value="8388608">NodeGroup</option>
-                            <option value="16777216">Browser</option>
-                            <option value="33554432">BrowserVersion</option>
-                            <option value="67108864">OS</option>
-                            <option value="134217728">OSVersion</option>
-                            <option value="268435456">MobileDevice</option>
-                            <option value="536870912">MobileDeviceVersion</option>
-                            <option value="1073741824">MobileBrand</option>
-                            <option value="2147483648">ScreenDimensions</option>
-                            <option value="4294967296">PageGroup</option>
-                            <option value="8589934592">Variation</option>
-                            <option value="17179869184">PageUrl</option>
-                            <option value="34359738368">Domain</option>
-                            <option value="68719476736">Organization</option>
-                            <option value="137438953472">UserAgent</option>
-                            <option value="274877906944">ContinentExternal</option>
-                            <option value="549755813888">CountryExternal</option>
-                            <option value="1099511627776">RegionExternal</option>
-                            <option value="2199023255552">LocationMachineName</option>
-                            <option value="4398046511104">ErrorType</option>
-                            <option value="8796093022208">MonitorType</option>
-                            <option value="17592186044416">IsChildRequest</option>
-                            <option value="35184372088832">DateRangeIndex</option>
-                            <option value="70368744177664">HistogramIntervalMax</option>
-                            <option value="140737488355328">ResponseCode</option>
-                            <option value="281474976710656">MimeType</option>
-                            <option value="562949953421312">ApdexLevel</option>
-                            <option value="1125899906842624">ReportType</option>
-                            <option value="2251799813685248">MobileCarrierNetwork</option>
-                            <option value="4503599627370496">MobileRadioAccessTechnology</option>
-                        </select>
-                    </td>
-
-                </tr> 
-         </div>
-         </table>
+                </tr>
+ 
             <div>
-                <button class="goto_button" id="query_button2" type="button">
+                <button class="goto_button" id="query_button" type="button">
                     Query</button>
-                </div>
-                
+            </div>
 </body>
 </html>
