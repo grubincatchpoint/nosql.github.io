@@ -49,7 +49,6 @@
     }
 </style>
 <link type="text/css" rel="stylesheet" href="NoSQL-CSS.css"/>
-<script src="NoSQL-JS.js"></script>
 <head>
     <h1>
     No SQL Reporting
@@ -74,7 +73,7 @@
                         Report Type
                     </td>
                     <td>
-                        <select class="tiny" name="reportTypeDropdown">
+                        <select class="tiny" name="reportTypeDropdown" id="reportBox">
                             <option value="1" selected>Test</option>
                             <option value="2">Host Collection </option>
                             <option value="3">Content Zone</option>
@@ -92,9 +91,8 @@
                     Add</button>
                      <button class="goto_button" id="clear_button" type="button">
                     Clear</button>
-                           <p>          
-                            JSON:
-                            <input type ="text" name="ReportJSON" id="reportJSON">
+                           <p id="reportJSON">          
+                            
                         </p>
                     </td>
                     <td>
@@ -125,14 +123,14 @@
                         Start Time(s) (UTC)
                     </td>
                     <td>
-                        <input type="text" class="medium" id="start_time_test" placeholder="mmddyyyyhhmi"
+                        <input type="text" class="medium" id="start_time_test" placeholder="yyyymmddhhmi"
                             _data_key="sta" />
                     </td>
                     <td>
                         End Time(s) (UTC)
                     </td>
                     <td>
-                        <input type="text" class="medium" id="end_time_test" placeholder="mmddyyyyhhmi" _data_key="end" />
+                        <input type="text" class="medium" id="end_time_test" placeholder="yyyymmddhhmi" _data_key="end" />
                     </td>
                     <td>
                         Date Aggregation
@@ -474,6 +472,9 @@
                 <button class="goto_button" id="query_button2" type="button">
                     Query</button>
                 </div>
-                
+       <script type="text/javascript" src="http://cpprod1.catchpoint.com/ui/js/jquery/v1.9.1/jquery-1.9.1-min.js"></script>
+    <script type="text/javascript" src="http://cpprod1.catchpoint.com/ui/js/jquery/ui/v1.10.2/jquery-ui-1.10.2.custom-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="NoSQL-JS.js"></script>            
 </body>
 </html>
