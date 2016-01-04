@@ -1,0 +1,397 @@
+
+<!doctype html>
+<html>
+<title>Partition Report: Help</title>
+<style type="text/css">
+    *
+    {
+        font-family: calibri;
+        color: #000;
+        font-size: 12px;
+    }
+    td
+    {
+        padding: 0 5 0 5;
+        vertical-align: top;
+        border: 1px solid black;
+    }
+    th
+    {
+        padding: 0 5 0 5;
+        vertical-align: top;
+        border: 1px solid black;
+        background-color: #48d;
+    }
+    table
+    {
+        border: 2px solid black;
+    }
+    hr
+    {
+        border: 1px solid black;
+        background-color: black;
+    }
+    h1
+    {
+        font-size: 22px;
+    }
+    h2
+    {
+        font-size: 18px;
+    }
+    h3
+    {
+        font-size: 14px;
+    }
+    a
+    {
+        color: Blue;
+    }
+</style>
+<link type="text/css" rel="stylesheet" href="CPstylesheet.css"/>
+<head>
+    <h1>
+    No SQL Reporting
+    </h1>
+</head>
+
+<body>
+    <div id="accordion">
+        <h3 id="query_header">
+            Test Query</h3>
+        <div class="content">
+            <br />
+            <div>
+                <button class="goto_button" id="query_button" type="button">
+                    Query</button>
+            </div>
+            <br />
+ <table border="1" id="query_table" width="100%">
+                <tr>
+                    <td>
+                        Report Type
+                    </td>
+                    <td>
+                        <select class="multi_medium" name="reportTypeDropdown">
+                            <option value="1" selected>Test</option>
+                            <option value="2">Host Collection </option>
+                            <option value="3">Content Zone</option>
+                            <option value="4">Glimpse</option>
+                            <option value="5">Glimpse Raw</option>
+                            <option value="6">Request</option>
+                            <option value="7">Recent Errors</option>
+                            <option value="8">Benchmark Index</option>
+                            <option value="9">Glimpse Mobile Request</option>
+                            <option value="10">Glimpse Mobile Request Raw</option>
+                            <option value="11">Glimpse Mobile Screen</option>
+                            <option value="12">Glimpse Mobile Screen Raw</option>
+                        </select>
+                    </td>
+                     <tr>
+                    <td>
+                        Object Type
+                    </td>
+                    <td>
+                        <select class="tiny" _data_key="idt">
+                            <option value="18">Division</option>
+                            <option value="28">Product</option>
+                            <option value="30">Folder</option>
+                            <option value="32" selected>Test</option>
+                        </select>
+                    </td>
+                    <td>
+                        Object ID(s)
+                    </td>
+                    <td>
+                        <input type="text" class="medium" _data_key="id" />
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td>
+                        Start Time(s) (UTC)
+                    </td>
+                    <td>
+                        <input type="text" class="medium" id="start_time_test" placeholder="mmddyyyyhhmi"
+                            _data_key="sta" />
+                    </td>
+                    <td>
+                        End Time(s) (UTC)
+                    </td>
+                    <td>
+                        <input type="text" class="medium" id="end_time_test" placeholder="mmddyyyyhhmi" _data_key="end" />
+                    </td>
+                    <td>
+                        Date Aggregation
+                    </td>
+                    <td>
+                        <select class="medium" _data_key="agd">
+                            <option value="0">None</option>
+                            <option value="1">Total</option>
+                            <option value="2">HourOfDay</option>
+                            <option value="3">DayOfWeek</option>
+                            <option value="4" selected>Minutes5</option>
+                            <option value="5">Minutes10</option>
+                            <option value="6">Minutes15</option>
+                            <option value="7">Minutes30</option>
+                            <option value="8">Hour</option>
+                            <option value="9">Day</option>
+                            <option value="10">Minutes1</option>
+                            <option value="11">Hours2</option>
+                            <option value="12">Hours3</option>
+                            <option value="13">Hours4</option>
+                            <option value="14">Hours6</option>
+                            <option value="15">Hours8</option>
+                            <option value="16">Hours12</option>
+                            <option value="17">Week</option>
+                            <option value="18">MinuteOfHour</option>
+                            <option value="19">Minute5OfHour</option>
+                            <option value="20">DayOfWeekHourOfDay</option>
+                            <option value="21">DayOfWeekMinute5OfHour</option>
+                            <option value="22">WeekMoving</option>
+                            <option value="23">Millisecond</option>
+                            <option value="24">Second</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Metric Types
+                    </td>
+                    <td>
+                        <select class="multi_large" _data_key="met" multiple>
+                            <option value="0">None (for Insight Indicators only) </option>
+                            <option value="130" selected>TestTime</option>
+                            <option value="1">TotalPageLoadTime</option>
+                            <option value="2">PageLoadTime </option>
+                            <option value="3">DnsTime</option>
+                            <option value="4">ConnectTime</option>
+                            <option value="5">SendTime</option>
+                            <option value="6">WaitTime</option>
+                            <option value="7">ReceiveTime</option>
+                            <option value="8">TimeToFirstByteTimePage</option>
+                            <option value="9">TimeToFirstByteTime</option>
+                            <option value="10">TotalLoadTimePage</option>
+                            <option value="11">TotalLoadTime</option>
+                            <option value="12">DomTime</option>
+                            <option value="13">PerceivedLoadTime</option>
+                            <option value="14">TotalPageFileSize</option>
+                            <option value="15">FileSize</option>
+                            <option value="16">TotalPageThroughput</option>
+                            <option value="17">Throughput</option>
+                            <option value="18">PageViews</option>
+                            <option value="19">PageViewsIncomplete</option>
+                            <option value="20">PageViewsWithPageLoadErrors</option>
+                            <option value="21">PageViewsWithObjectLoadErrors</option>
+                            <option value="22">PageViewsWithScriptErrors</option>
+                            <option value="23">ItemErrors</option>
+                            <option value="24">ScriptErrors</option>
+                            <option value="25">ExternalHosts</option>
+                            <option value="26">Exits</option>
+                            <option value="27">Items</option>
+                            <option value="28">ItemsCached</option>
+                            <option value="29">PageViewsWithPageDnsErrors</option>
+                            <option value="30">PageViewsWithPageConnectionErrors</option>
+                            <option value="31">PageViewsWithPageSslErrors</option>
+                            <option value="32">PageViewsWithPageResponseErrors</option>
+                            <option value="33">PageViewsWithPageContentErrors</option>
+                            <option value="34">PageViewsWithObjectContentSystemErrors</option>
+                            <option value="35">SslTime</option>
+                            <option value="36">PingPacketLossPct</option>
+                            <option value="37">PingRoundTripTime</option>
+                            <option value="38">AvailabilityPagePct</option>
+                            <option value="39">AvailabilityContentPct</option>
+                            <option value="40">ItemsCachedPct</option>
+                            <option value="41">PageViewsWithVerifyOnError</option>
+                            <option value="42">PageViewsWithCookieCollections</option>
+                            <option value="43">PageViewsWithScreenCapture</option>
+                            <option value="44">CustomMetrics</option>
+                            <option value="45">CustomDimensions</option>
+                            <option value="46">FilmStripFrames</option>
+                            <option value="47">ServerResponseTime</option>
+                            <option value="48">FtpDeleteTime</option>
+                            <option value="49">ResponseContentSize</option>
+                            <option value="50">ExitPct</option>
+                            <option value="51">AvailabilityTransactionStepPct</option>
+                            <option value="52">StartRenderingTime</option>
+                            <option value="53">WaitReceiveTime</option>
+                            <option value="54">DocumentCompleteTime</option>
+                            <option value="55">PageSpeedScore</option>
+                            <option value="56">TitleTime</option>
+                            <option value="57">Connections</option>
+                            <option value="58">PageViewsWithPageTimeoutErrors</option>
+                            <option value="59">TransactionSteps</option>
+                            <option value="60">StartToEndTime</option>
+                            <option value="61">ImpactTime</option>
+                            <option value="62">PageViewsWithHostCollections</option>
+                            <option value="63">PageViewsWithContentZones</option>
+                            <option value="64">HostCollections</option>
+                            <option value="65">ContentZones</option>
+                            <option value="66">ImpactTimePct</option>
+                            <option value="67">PageViewsWithFilmStrip</option>
+                            <option value="68">AuthenticationTime</option>
+                            <option value="69">MailHeloTime</option>
+                            <option value="70">Redirections</option>
+                            <option value="71">ContentTypesImage</option>
+                            <option value="72">ContentTypesScript</option>
+                            <option value="73">ContentTypesHtml </option>
+                            <option value="74">ContentTypesCss</option>
+                            <option value="75">ContentTypesXml</option>
+                            <option value="76">ContentTypesFlash</option>
+                            <option value="77">ContentTypesMedia</option>
+                            <option value="78">ContentTypesOther</option>
+                            <option value="79">ItemsNonCached</option>
+                            <option value="80">StreamingBufferingCounter</option>
+                            <option value="81">StreamingBufferingInitialTime</option>
+                            <option value="82">StreamingBufferingTotalTime</option>
+                            <option value="83">StreamingWaitTime</option>
+                            <option value="84">StreamingPlayTime</option>
+                            <option value="85">StreamingBandwidth</option>
+                            <option value="86">StreamingDroppedFrames</option>
+                            <option value="87">ContentLoadTime</option>
+                            <option value="88">DomInteractiveTime</option>
+                            <option value="89">ExitToEntryTime</option>
+                            <option value="90">ExitToLoadTime</option>
+                            <option value="91">RedirectTime</option>
+                            <option value="92">UniqueUsers</option>
+                            <option value="93">Visits</option>
+                            <option value="94">EntryToLoadTime </option>
+                            <option value="95">PagesPerVisit</option>
+                            <option value="96">FullConnectTime</option>
+                            <option value="97">WireTime</option>
+                            <option value="98">ClientTime</option>
+                            <option value="99">Conversions</option>
+                            <option value="100">SalesItems</option>
+                            <option value="101">SalesRevenue</option>
+                            <option value="102">BounceRatePerAvgDocumentCompleteTime</option>
+                            <option value="103">ConversionRatePerAvgDocumentCompleteTime</option>
+                            <option value="104">RevenueRatePerAvgDocumentCompleteTime</option>
+                            <option value="105">PageViewRatePerAvgDocumentCompleteTime</option>
+                            <option value="106">ConversionRate</option>
+                            <option value="107">ContentTypesFont</option>
+                            <option value="108">ContentTypeBytesImage</option>
+                            <option value="109">ContentTypeBytesScript</option>
+                            <option value="110">ContentTypeBytesHtml</option>
+                            <option value="111">ContentTypeBytesCss</option>
+                            <option value="112">ContentTypeBytesXml</option>
+                            <option value="113">ContentTypeBytesFlash</option>
+                            <option value="114">ContentTypeBytesMedia</option>
+                            <option value="115">ContentTypeBytesOther</option>
+                            <option value="116">ContentTypeBytesFont</option>
+                            <option value="117">BlockedTime</option>
+                            <option value="118">Crashes</option>
+                            <option value="119">BlockedTime</option>
+                            <option value="120">MemoryWarnings</option>
+                            <option value="121">MemoryWarningPct</option>
+                            <option value="122">AboveTheFoldTime</option>
+                            <option value="123">DomContentLoadedEventTime</option>
+                            <option value="124">LoadEventTime</option>
+                            <option value="125">SpeedIndex</option>
+                            <option value="126">ItemsSend</option>
+                            <option value="127">ItemsReceive</option>
+                            <option value="128">BytesSend</option>
+                            <option value="129">BytesReceive</option>
+                            <option value="131">UniqueTestRuns</option>
+                        </select>
+                    </td>
+                    </tr>    
+                <tr>
+                    <td>
+                        Data Values
+                    </td>
+                    <td>
+                        <select class="multi_medium" _data_key="dat" multiple>
+                            <option value="0">Counter</option>
+                            <option value="1" selected>Average</option>
+                            <option value="2">Median</option>
+                            <option value="3">StandardDeviation</option>
+                            <option value="4">Min</option>
+                            <option value="5">Max</option>
+                            <option value="6">GeometricMean</option>
+                            <option value="7">Percentile95</option>
+                            <option value="8">Percentile85</option>
+                            <option value="9">Histogram</option>
+                            <option value="10">BoxPlot</option>
+                            <option value="11">Apdex</option>
+                            <option value="12">WeightedCounter</option>
+                            <option value="13">WeightedAverage</option>
+                            <option value="14">InterQuartileRange</option>
+                            <option value="15">Percentile75</option>
+                            <option value="16">Percentile99</option>
+                            <option value="17">GeometricStandardDeviation</option>
+                            <option value="18">PercentileCustom</option>
+                            <option value="19">Percentile25</option>
+                            <option value="20">RateHistogram</option>
+                            <option value="21">Total</option>
+                            <option value="22">CDF</option>
+                            <option value="23">ApdexPercentileSatisfied</option>
+                            <option value="24">ApdexPercentileTolerating</option>
+                            <option value="25">ApdexPercentileFrustrated</option>
+                            <option value="26">ApdexPercentileNotFrustrated</option>
+                        </select>
+                    </td>
+                    <td>
+                        Derivative Values
+                    </td>
+                    <td>
+                        <select class="multi_medium_few" _data_key="drv" multiple>
+                            <option value="0" selected>None</option>
+                            <option value="1">MovingAverage</option>
+                            <option value="2">MovingMedian</option>
+                            <option value="3">ExponentialSmoothing</option>
+                            <option value="4">RateOfChange</option>
+                            <option value="5">TrendShift</option>
+                            <option value="6">TrendShiftMedian</option>
+                        </select>
+                    </td>
+                    <td>
+                        Histogram Data Values
+                    </td>
+                    <td>
+                        <select class="tiny" _data_key="rhdat" multiple>
+                            <option value="0" selected>Counter</option>
+                            <option value="1">Rate</option>
+                            <option value="2">Visits</option>
+                            <option value="3">Value</option>
+                        </select>
+                    </td>
+                                        <td>
+                        Monitor-Type
+                    </td>
+                    <td>
+                        <select class="medium" _data_key="m">
+                            <option value="0">IE</option>
+                            <option value="2" selected>SNO</option>
+                            <option value="3">EMULATED</option>
+                            <option value="8">PING-ICMP</option>
+                            <option value="9">TRACERT-ICMP</option>
+                            <option value="10">DNS-TRAVERSAL</option>
+                            <option value="11">PING-TCP</option>
+                            <option value="12">DNS-EXP</option>
+                            <option value="13">DNS-DIRECT</option>
+                            <option value="14">TRACERT-UDP</option>
+                            <option value="15">PORT-TCP</option>
+                            <option value="16">FTP</option>
+                            <option value="18">BROWSER-CHROME</option>
+                            <option value="19">PLAYBACK</option>
+                            <option value="20">PLAYBACK-MOBILE</option>
+                            <option value="21">SMTP</option>
+                            <option value="22">PORT-UDP</option>
+                            <option value="23">PING-UDP</option>
+                            <option value="24">STREAMING</option>
+                            <option value="25">SAPI</option>
+                            <option value="26">CHROME-MOBILE</option>
+                            <option value="27">SFTP</option>
+                            <option value="28">SSH</option>
+                            <option value="29">TRACERT-TCP</option>
+                            <option value="30">WEB-SOCKET</option>
+                        </select>
+                    </td>
+                </tr>
+ 
+            <div>
+                <button class="goto_button" id="query_button" type="button">
+                    Query</button>
+            </div>
+</body>
+</html>

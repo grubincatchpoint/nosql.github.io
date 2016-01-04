@@ -1,0 +1,156 @@
+html {
+	font-family: Arial;
+	font-size: x-small;
+}
+
+#accordion h3 {
+    background-color: #9bbbdc;
+	border-radius: 10px 10px 10px 10px;
+	color: black;
+    font-weight: bold;
+    margin: 2px;
+    padding: 15px; 
+}
+
+table {
+	border-radius: 5px; 
+	padding-left: 20px; 
+	padding-right: 20px; 
+	padding-bottom: 10px; 
+	border: none; 
+}
+
+td 
+{
+	padding: 2px 4px 2px 4px;
+	text-align: left;
+	vertical-align: top;
+}
+
+input
+{
+	font-size: x-small;
+	text-align: left;
+}
+
+input.small
+{
+	font-size: x-small;
+	width: 50px;
+	text-align: left;
+}
+
+input.medium
+{
+	font-size: x-small;
+	width: 100px; 
+	text-align: left;
+}
+
+input.medium_large
+{
+	font-size: x-small;
+	width: 200px; 
+	text-align: left;
+}
+
+input.large
+{
+	font-size: x-small;
+	width: 420px; 
+	text-align: left;
+}
+
+select {
+	font-size: x-small;
+	text-align: left; 
+	width: 150px; 
+}
+
+select.tiny {
+	font-size: x-small;
+	text-align: left; 
+	width: 100px; 
+}
+
+select.medium {
+	font-size: x-small;
+	text-align: left; 
+	width: 200px; 
+}
+
+select.large {
+	font-size: x-small;
+	text-align: left; 
+	width: 250px; 
+}
+
+select.multi {
+	font-size: x-small;
+	height: 100px;
+	text-align: left; 
+	width: 150px; 
+}
+
+select.multi_medium {
+	font-size: x-small;
+	height: 100px;
+	text-align: left; 
+	width: 200px; 
+}
+
+select.multi_medium_few {
+	font-size: x-small;
+	height: 70px;
+	text-align: left; 
+	width:200px; 
+}
+
+select.multi_large {
+	font-size: x-small;
+	height: 100px;
+	text-align: left; 
+	width:250px; 
+}
+
+textarea 
+{
+    font-family: Arial;
+	font-size: x-small;
+	text-align: left;
+	width: 420px;
+}
+
+h1 {
+	background-color:#75A1D0; 
+	border-radius: 10px 10px 10px 10px;
+	line-height: 120px;
+	padding-left: 20px;
+	padding-right: 10px; 
+}
+
+img {
+	float: right;
+	height: 100px; 
+	width: 270px; 
+	padding: 10px;
+}
+
+.content {
+	background-color: #dfecfc;
+	border-radius: 10px 10px 10px 10px;
+	color: black;
+}
+
+.query_description {
+	font-weight: bold;
+	padding-left: 20px; 
+	padding-top: 10px; 
+}
+
+.goto_button{
+	bottom: 0px; 
+	position: relative;
+	left: 20px;
+	width: 80px; 
+}
